@@ -1,0 +1,78 @@
+{
+  "method": "Built-in image_gen",
+  "disclosure": "Illustrative AI-generated people for user-supplied example doctor profiles, not verified clinic staff.",
+  "assets": [
+    {
+      "slug": "arjun-rao",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-074a51fa-25b4-47e7-b774-a0c0d0916860.png",
+      "output": "src/assets/therapists/arjun-rao.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian male physiotherapist in his late thirties, short neat black hair, warm brown skin, light stubble, ivory medical coat over muted sage polo, standing with relaxed hands. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "sneha-reddy",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-8e735f94-2e23-42de-849e-d12c4d5db0e0.png",
+      "output": "src/assets/therapists/sneha-reddy.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian female physiotherapist in her mid thirties, dark hair tied in a low bun, medium brown skin, ivory medical coat over taupe blouse, relaxed hands. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "rahul-verma",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-0c531d2e-92f5-4ec6-9889-a1c861421bde.png",
+      "output": "src/assets/therapists/rahul-verma.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian male sports physiotherapist in his early thirties, athletic build, curly short black hair, medium brown skin, charcoal clinical polo with small blank ID badge, relaxed stance. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "priya-sharma",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-1f7f0e6f-00f5-45db-83fb-a7e54fa0b406.png",
+      "output": "src/assets/therapists/priya-sharma.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian female pediatric physiotherapist in her early thirties, shoulder-length straight dark hair, warm brown skin, ivory medical coat over soft sage blouse. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "kavitha-nair",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-68b159ab-de21-4cdb-bda1-b248cf9ddda0.png",
+      "output": "src/assets/therapists/kavitha-nair.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian female physiotherapist in her early fifties, dark hair with natural silver strands in a low bun, medium brown skin, ivory medical coat over beige blouse, kind calm smile. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "aditya-kumar",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-12ffadd9-0df1-4c4b-84ac-273ab4b5aeaf.png",
+      "output": "src/assets/therapists/aditya-kumar.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian male physiotherapist in his early forties, neat dark hair, clean shaven, medium brown skin, ivory medical coat over charcoal shirt. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "anjali-menon",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-c9044aca-24c7-496b-b090-8d46f5d94cdf.png",
+      "output": "src/assets/therapists/anjali-menon.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian female physiotherapist in her late thirties, long dark wavy hair tied back, medium brown skin, ivory medical coat over warm taupe clinical blouse. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "meghana-iyer",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-40534fef-0d2c-4cd2-b271-3ebc65ba9294.png",
+      "output": "src/assets/therapists/meghana-iyer.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian female physiotherapist in her early forties, shoulder-length dark hair, subtle oval eyeglasses, brown skin, ivory medical coat over sage shirt. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "vikram-singh",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-2a954319-eccd-4ce3-8e8c-2e46ea95e76e.png",
+      "output": "src/assets/therapists/vikram-singh.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian male physiotherapist in his late forties, cropped salt-and-pepper hair and neatly trimmed beard, brown skin, ivory medical coat over beige collared shirt. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "neha-joshi",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-917a253d-912a-442b-9fc8-37b9efca4309.png",
+      "output": "src/assets/therapists/neha-joshi.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian female physiotherapist in her mid thirties, neat dark ponytail, light brown skin, ivory medical coat over charcoal blouse. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "kiran-patel",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-c2352401-2b1b-434f-bf31-84238793f630.png",
+      "output": "src/assets/therapists/kiran-patel.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian male physiotherapist in his early forties, short black hair, rectangular eyeglasses, warm brown skin, ivory medical coat over sage collared shirt. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    },
+    {
+      "slug": "rohit-mehta",
+      "source": "C:\\Users\\user\\.codex\\generated_images\\01a0f0e4-d2ef-7fe1-afca-f66485abfc75\\exec-1493e3d9-7881-4800-84ec-0e4648c0ede2.png",
+      "output": "src/assets/therapists/rohit-mehta.webp",
+      "prompt": "Use case: photorealistic-natural. Generate ONE realistic editorial portrait of an entirely fictional physiotherapist for an illustrative clinic team page. Portrait vertical 1024x1536, waist-up, person centered, complete head and shoulders, looking towards camera with gentle professional smile, relaxed approachable posture not crossed arms. Subject: Indian male manual therapy physiotherapist in his late thirties, short wavy black hair and neat beard, warm brown skin, charcoal clinical polo with small blank ID badge. Soft side daylight, quiet warm ivory and muted beige clinic wall background, subtle out-of-focus oak furnishing, premium natural photography, realistic skin texture and fine imperfections, restrained sage/taupe palette, 85mm portrait lens. Clinical professional appearance. No text, no readable badges, no logos, no watermarks, no stethoscope. One person only, no montage. Keep styling suitable for a consistent series of clinic portraits."
+    }
+  ]
+}

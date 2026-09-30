@@ -1,2 +1,7 @@
 .detail-dialog input{display:block;width:100%;padding:13px 10px;border:1px solid #a5aa9d;background:#fffdf8;color:#34382f;margin-top:9px;border-radius:0;font-size:16px}
 .detail-dialog input:focus-visible{outline:2px solid #856b32;outline-offset:3px}
+.booking-datetime{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.booking-datetime label,.booking-datetime input{min-width:0}
+.booking-datetime input{min-height:48px;color-scheme:light;font-family:inherit}
+.booking-datetime input::-webkit-calendar-picker-indicator{cursor:pointer}
+@media(max-width:420px){.booking-datetime{grid-template-columns:1fr;gap:0}}

@@ -14,6 +14,7 @@ npm run dev
 ```sh
 npm run build
 npm test
+node scripts/check-doctors.mjs
 ```
 
 The browser smoke test requires Google Chrome. It starts its own local Vite server on port 4173 and checks ten widths from 320 to 1920 pixels, all eight program dialogs, enquiry download, mobile navigation, reduced motion, image loading and browser errors. Screenshots and the results are saved in `artifacts/`.
@@ -23,8 +24,11 @@ The browser smoke test requires Google Chrome. It starts its own local Vite serv
 - Replace `[PHYSIOTHERAPY BRAND]` in `src/components/Header.jsx` and `src/components/Footer.jsx`.
 - Replace contact placeholders in `src/components/Footer.jsx` and `src/components/DetailDialog.jsx`.
 - Program content is in `src/data.js`; section content is in `src/sections/`.
-- The appointment interface only downloads a local enquiry draft. It does not transmit information, reserve appointments or imply confirmation. Connect a real scheduling service before enabling live booking.
-- No therapist identities, clinical qualifications, opening hours or contact details have been invented.
+- The appointment interface prepares a WhatsApp message with visitor details and preferences, or downloads a local draft. The visitor sends the message in WhatsApp; the clinic must confirm the appointment.
+- `/doctors/` shows twelve user-supplied example profiles, with AI-generated illustrative portraits. These are explicitly labelled as examples, not verified clinic staff. Replace the example names and qualifications with verified information before presenting them as an actual team.
+- Doctor names, qualifications, specialties and four-sentence descriptions are in `src/doctors.js`. The incomplete Manual Therapy description was completed with general specialty information.
+- Doctor portraits are stored in `src/assets/therapists/`; the built-in image generation prompts and filenames are recorded in that directory's `provenance.json`.
+- Doctor descriptions reveal on hover, keyboard focus, or tap; Escape dismisses a reveal. The doctor-page check covers all twelve profiles, responsive widths, touch/keyboard interaction, navigation and booking access.
 - Generated images are illustrative and do not represent actual clinic staff or patients. Their prompts and local paths are recorded in `src/assets/provenance.json`.
 
 ## Reference and motion

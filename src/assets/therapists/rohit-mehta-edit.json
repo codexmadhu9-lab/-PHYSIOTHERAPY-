@@ -1,0 +1,6 @@
+{
+  "method": "Built-in image_gen edit",
+  "source": "rohit-mehta.webp",
+  "output": "rohit-mehta-coat.webp",
+  "prompt": "Edit this specific portrait. Change only the person's clothing: dress him in a professional clean white long-sleeved doctor's laboratory coat with tailored lapels, worn open over a muted sage collared shirt. The coat should have natural fabric texture and realistic folds, pockets, and a small blank badge with no text. Keep his exact face, identity, dark wavy hair, beard, expression, skin tone, physique, seated pose, hands position, framing, camera angle, clinic background and warm natural lighting unchanged. Maintain photorealistic quality. No new people, no stethoscope, no text or logos. Portrait aspect ratio 2:3."
+}

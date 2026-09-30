@@ -1,0 +1,22 @@
+html:root{scroll-padding-top:150px}
+header.header.header--sticky{
+ position:fixed;
+ inset:0 0 auto;
+ width:100%;
+ z-index:30;
+ background:transparent;
+ border:0;
+ box-shadow:none;
+ backdrop-filter:none;
+}
+header.header.header--scrolled{
+ background:transparent;
+ box-shadow:none;
+ backdrop-filter:none;
+}
+.header-spacer{height:140px}
+.auth-actions .header-booking{border-bottom:1px solid currentColor;text-transform:none;letter-spacing:.3px;padding:10px 0;min-height:40px;line-height:1.4}
+@media(max-width:800px){
+ html:root{scroll-padding-top:125px}
+ .header-spacer{height:114px}
+}
