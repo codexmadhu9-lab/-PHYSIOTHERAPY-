@@ -1,0 +1,100 @@
+import {chromium} from 'playwright';
+import {createServer} from 'vite';
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+const server=await createServer({server:{host:'127.0.0.1',port:4173,strictPort:true}});
+await server.listen();
+let browser;
+try {
+ browser=await chromium.launch({channel:'chrome',headless:true});
+ const errors=[];
+ const page=await browser.newPage({viewport:{width:1440,height:1000}});
+ page.on('pageerror',e=>errors.push(e.message));
+ page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+ await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'});
+ await page.waitForTimeout(1900);
+ await mkdir('artifacts',{recursive:true});
+ await page.screenshot({path:'artifacts/desktop-hero.png'});
+ await page.locator('.header').getByRole('button',{name:'Login',exact:true}).click();
+ await page.getByLabel('Email address',{exact:true}).fill('person@example.com');
+ await page.getByLabel('Password',{exact:true}).fill('example-password');
+ await page.getByRole('button',{name:'Show password',exact:true}).click();
+ assert.equal(await page.locator('#auth-password').getAttribute('type'),'text');
+ await page.locator('.auth-dialog').getByRole('button',{name:'Login',exact:true}).click();
+ assert.match(await page.locator('.auth-status').innerText(),/not available yet/);
+ assert.equal(await page.locator('#auth-password').inputValue(),'');
+ await page.keyboard.press('Escape');
+ assert.equal(await page.locator('.auth-dialog').count(),0);
+ assert.equal(await page.locator('.header').getByRole('button',{name:'Login',exact:true}).evaluate(e=>e===document.activeElement),true);
+ await page.locator('.header').getByRole('button',{name:'Join us',exact:true}).click();
+ await page.getByLabel('Full name',{exact:true}).fill('Example Person');
+ await page.getByLabel('Email address',{exact:true}).fill('person@example.com');
+ await page.getByLabel('Password',{exact:true}).fill('example-password');
+ await page.getByLabel('Confirm password',{exact:true}).fill('different-password');
+ await page.getByRole('button',{name:'Create account',exact:true}).click();
+ assert.match(await page.locator('.auth-status').innerText(),/do not match/);
+ await page.getByLabel('Confirm password',{exact:true}).fill('example-password');
+ await page.getByRole('button',{name:'Create account',exact:true}).click();
+ assert.match(await page.locator('.auth-status').innerText(),/account has not been created/);
+ await page.getByRole('button',{name:'Close account popup'}).click();
+ for(let y=0;y<await page.locator('body').evaluate(e=>e.scrollHeight);y+=700){await page.evaluate(y=>window.scrollTo(0,y),y);await page.waitForTimeout(80);}
+ await page.waitForTimeout(1300);
+ assert.equal(await page.locator('.program').count(),8);
+ for(const button of await page.locator('.program').all()){
+  await button.click();await page.locator('.detail-dialog').waitFor({state:'visible'});
+  assert.ok((await page.locator('#dialog-title').innerText()).length>5);
+  await page.keyboard.press('Escape');
+ }
+ await page.locator('.cta button').click();
+ await page.getByLabel('Interested in').selectOption('Sports Rehabilitation');
+ const bookingLink=new URL(await page.getByRole('link',{name:'Continue on WhatsApp'}).getAttribute('href'));
+ assert.equal(bookingLink.pathname,'/919281339363');
+ assert.match(bookingLink.searchParams.get('text'),/Sports Rehabilitation/);
+ const download=page.waitForEvent('download');await page.getByRole('button',{name:'Save enquiry draft'}).click();
+ assert.equal((await download).suggestedFilename(),'physiotherapy-enquiry.txt');
+ assert.match(await page.locator('[role="status"]').innerText(),/no appointment is booked/);
+ await page.getByRole('button',{name:'Close dialog'}).click();
+ const results=[];
+ for(const width of [1920,1440,1280,1024,768,430,390,375,360,320]){
+  await page.setViewportSize({width,height:900});await page.waitForTimeout(120);
+  const state=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,broken:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src)}));
+  assert.ok(state.scrollWidth<=width,`Horizontal overflow at ${width}: ${state.scrollWidth}`);
+  assert.deepEqual(state.broken,[]);results.push(state);
+  await page.locator('.header').getByRole('button',{name:'Login',exact:true}).click();
+  assert.ok(await page.locator('.auth-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth),`Account popup overflow at ${width}`);
+  await page.getByRole('button',{name:'Close account popup'}).click();
+ }
+ await page.setViewportSize({width:390,height:844});await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+ await page.screenshot({path:'artifacts/mobile-hero.png'});
+ await page.getByRole('button',{name:'Open navigation'}).click();
+ await page.locator('.mobile-menu').waitFor({state:'visible'});
+ await page.screenshot({path:'artifacts/mobile-menu.png'});
+ await page.locator('.mobile-menu').getByRole('link',{name:/Programs/}).click();
+ assert.equal(await page.locator('.mobile-menu').isVisible(),false);
+ await page.getByRole('button',{name:'Open navigation'}).click();await page.keyboard.press('Escape');
+ assert.equal(await page.locator('.mobile-menu').isVisible(),false);
+ await page.emulateMedia({reducedMotion:'reduce'});await page.reload({waitUntil:'networkidle'});
+ assert.equal(await page.locator('h1').evaluate(e=>getComputedStyle(e).opacity),'1');
+ await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'artifacts/desktop-full.png',fullPage:true});
+ await page.locator('.desktop-nav').getByRole('link',{name:'Contact',exact:true}).click();
+ await page.waitForURL('**/contact/');
+ await page.locator('#contact-title').waitFor();
+ assert.equal(await page.locator('.contact-phone').getAttribute('href'),'tel:+919550541177');
+ assert.equal(await page.getByRole('link',{name:/Message on WhatsApp/}).getAttribute('href'),'https://wa.me/919281339363');
+ await page.reload({waitUntil:'networkidle'});
+ assert.match(await page.title(),/Contact/);
+ await page.screenshot({path:'artifacts/contact-desktop.png',fullPage:true});
+ for(const width of [1920,1440,1280,1024,768,430,390,375,360,320]){
+  await page.setViewportSize({width,height:900});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Contact overflow at ${width}`);
+ }
+ await page.setViewportSize({width:390,height:844});
+ await page.screenshot({path:'artifacts/contact-mobile.png',fullPage:true});
+ await page.getByRole('button',{name:'Open navigation'}).click();
+ await page.locator('.mobile-menu').getByRole('link',{name:/About/}).click();
+ await page.waitForURL('**/#about');
+ await page.locator('#about').waitFor();
+ assert.deepEqual(errors,[]);
+ await writeFile('artifacts/checks.json',JSON.stringify({viewports:results,consoleErrors:errors,programDialogs:8,bookingDraft:'passed',mobileMenu:'passed',reducedMotion:'passed'},null,2));
+ console.log('PASS: 10 viewport widths, login/signup forms and validation, 8 program dialogs, enquiry download, mobile navigation, reduced motion, images and browser console.');
+} finally {await browser?.close();await server.close();}

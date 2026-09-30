@@ -1,0 +1,18 @@
+{
+  "method": "Built-in image_gen",
+  "usage": "Original illustrative physiotherapy imagery; not actual staff or patients",
+  "assets": [
+    {
+      "path": "hero/natural-movement.webp",
+      "prompt": "Use case: photorealistic-natural. Create a premium editorial photograph for a physiotherapy website hero, wide landscape 1536x1024. A fit adult woman in muted warm taupe athletic top and dark sage leggings performing a graceful small athletic leap and full-body extension, feet visible, on an open pale stone terrace. Subject exclusively in LEFT third of frame, body occupies 75 percent of image height, natural believable anatomy and motion, hair moving. Vast uncluttered pale grey warm overcast sky and distant muted green horizon on RIGHT two-thirds for typography to be added in code. Soft daylight, subtle film texture, restrained desaturated natural palette, calm wellness feeling. Shot from low viewpoint. No text, logos or graphics. Original photography, not a reproduction of a specific person."
+    },
+    {
+      "path": "treatment/guided-assessment.webp",
+      "prompt": "Use case: photorealistic-natural. Wide landscape editorial physiotherapy photograph 1536x1024. Bright quiet rehabilitation studio with warm beige plaster walls and oak floor. Adult female patient in taupe athletic clothes doing a standing shoulder mobility reach, an adult female physiotherapist in charcoal shirt gently guiding the arm, both positioned on RIGHT HALF of the photograph, naturally engaged in movement assessment not looking at camera. LEFT HALF is empty warm brown plaster wall with soft diagonal sunlight. Natural anatomical correctness, understated premium wellness campaign, muted earthy colors, soft shadows, no text or logos."
+    },
+    {
+      "path": "movement/restore-balance.webp",
+      "prompt": "Use case: photorealistic-natural. Original wide landscape 1536x1024 editorial wellness photograph. Side view of an adult woman in charcoal leggings and soft off-white top performing a controlled low lunge stretch on a sage mat, arms reaching forward, in a minimal physiotherapy studio. Subject on LEFT HALF, entire body visible with correct realistic anatomy. Warm pale grey plaster wall, wooden floor, soft large window daylight from left, restrained sage and stone color palette, subtle shadows. Right half mostly empty studio wall. Calm authentic rehabilitation movement not posing at camera. No text, no logos, no medical objects."
+    }
+  ]
+}

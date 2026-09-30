@@ -1,0 +1,14 @@
+#assessment .assessment-image {
+  background: #eae6d6;
+}
+
+/* Preserve both people and the exercise ball in the supplied square photo. */
+#assessment .assessment-image img {
+  object-fit: contain;
+  object-position: center;
+}
+
+#assessment .assessment-image > span {
+  color: #34382f;
+  text-shadow: none;
+}

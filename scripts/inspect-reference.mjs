@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+const browser = await chromium.launch({channel:'chrome',headless:true});
+const page = await browser.newPage({viewport:{width:1440,height:1000},ignoreHTTPSErrors:true});
+await page.goto('https://nync.co.kr/',{waitUntil:'domcontentloaded',timeout:60000});
+await page.waitForTimeout(6000);
+await page.screenshot({path:'reference/desktop.png',fullPage:true});
+await fs.writeFile('reference/page.html',await page.content());
+console.log(await page.locator('body').innerText());
+await browser.close();

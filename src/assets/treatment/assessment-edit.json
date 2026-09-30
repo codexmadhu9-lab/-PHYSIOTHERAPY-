@@ -1,0 +1,8 @@
+{
+  "method": "Built-in image_gen background removal",
+  "original": "understand-the-movement.jpg",
+  "edited": "understand-the-movement-cutout.png",
+  "websiteAsset": "understand-the-movement-cutout.webp",
+  "background": "#eae6d6",
+  "prompt": "Edit this supplied physiotherapy photograph only. Remove the entire room background (white window, wall, floor, foreground blurred white strip) and make those background areas genuinely transparent with alpha. Preserve the two women exactly: identities, faces, skin, hair, clothing, body proportions, extended arms, poses and positions. Preserve the pink exercise ball and visible supporting chair exactly. Do not restyle, repaint or invent subjects. Keep original square composition and image boundaries; no text or new objects. Clean natural cutout edges including fine hair. This transparent cutout will be placed over a solid pale beige CSS background #eae6d6, so remove white halos. Output a transparent PNG."
+}

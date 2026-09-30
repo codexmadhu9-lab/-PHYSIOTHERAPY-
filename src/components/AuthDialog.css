@@ -1,0 +1,23 @@
+.auth-actions{display:flex;align-items:center;gap:24px;flex-shrink:0}
+.auth-actions button{border:0;background:transparent;padding:12px 0;font-size:13px;font-weight:400;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
+.auth-actions button:hover{text-decoration:underline;text-underline-offset:6px}
+.auth-dialog{width:min(480px,calc(100% - 32px));max-height:90svh;overflow:auto;background:#f1f0eb}
+.auth-inner{padding:58px 42px 35px}
+.auth-inner h2{font-size:38px;line-height:1.2;margin:20px 0 12px}
+.auth-inner>p:not(.eyebrow){font-size:15px;color:#686c63}
+.auth-inner label{display:block;font-size:14px;margin:22px 0 8px}
+.auth-inner input{display:block;width:100%;border:1px solid #a5aa9d;border-radius:0;background:#fffdf8;color:#34382f;font:inherit;font-size:16px;padding:13px 12px;margin-top:8px;min-width:0}
+.auth-inner input:focus-visible{outline:2px solid #856b32;outline-offset:2px}
+.password-field{position:relative}
+.password-field input{padding-right:65px}
+.password-field button{position:absolute;right:6px;top:4px;bottom:4px;border:0;background:transparent;padding:0 9px;font-size:12px}
+.auth-hint,.auth-availability{font-size:12px;color:#686c63;line-height:1.5;margin-top:10px}
+.auth-availability{margin-top:22px}
+.auth-status{font-size:13px;line-height:1.5;color:#795127;margin-top:14px}
+.auth-status:empty{display:none}
+.auth-switch{text-align:center;margin-top:24px}
+.auth-switch button{border:0;border-bottom:1px solid currentColor;background:none;padding:3px;margin-left:5px;font-size:14px}
+.mobile-menu .auth-actions{gap:35px}
+@media(max-width:800px){.header>.auth-actions{margin-left:auto;gap:18px}}
+@media(max-width:540px){.header{gap:10px}.header>.auth-actions{gap:12px}.header>.auth-actions button{font-size:10px}.auth-inner{padding:55px 25px 30px}.auth-inner h2{font-size:33px}}
+@media(max-width:360px){.header>.auth-actions{gap:8px}.header>.auth-actions button{font-size:9px}.header .menu-toggle{margin-left:0;width:28px}.header .wordmark{font-size:8px}.header .wordmark small{font-size:5px}}

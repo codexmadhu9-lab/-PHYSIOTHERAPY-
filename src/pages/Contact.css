@@ -1,0 +1,21 @@
+.contact-page{background:#f1f0eb}
+.contact-page .header{position:relative;border-bottom:1px solid rgba(45,48,39,.12)}
+.contact-intro{max-width:1280px;margin:auto;padding:100px 6% 85px}
+.contact-intro h1{font-size:clamp(48px,6vw,88px);font-weight:400;line-height:1.08;letter-spacing:-2px;margin:28px 0}
+.contact-intro h1 span{color:#858b78}
+.contact-intro>p:last-child{font-size:17px;color:#686c63}
+.contact-methods{max-width:1280px;margin:auto;padding:0 6% 95px;display:grid;grid-template-columns:1.1fr 1.1fr 1fr;gap:36px}
+.contact-method{border-top:1px solid #b8bcaf;padding-top:27px;display:flex;gap:18px;min-width:0}
+.contact-number{font-size:11px;color:#858b78;padding-top:5px}
+.contact-method h2{font-size:25px;font-weight:500;letter-spacing:0}
+.contact-method p{font-size:14px;color:#686c63;margin-top:14px}
+.contact-phone{display:flex;gap:25px;align-items:center;font-size:clamp(23px,2.1vw,30px);margin-top:28px;white-space:nowrap}
+.contact-phone span{font-size:22px}
+.contact-method .text-link{margin-top:12px;font-size:13px;gap:15px}
+.contact-method .contact-small{font-size:12px;margin-top:10px}
+.contact-method .social-pending{font-size:13px;margin-top:30px}
+.contact-photo{position:relative;isolation:isolate;min-height:420px;padding:85px max(6%,calc((100% - 1120px)/2));color:#fff;background:#d2a36c}
+.contact-photo img{position:absolute;inset:0;z-index:-1;object-fit:cover}
+.contact-photo h2{font-size:clamp(30px,3vw,45px);font-weight:500;line-height:1.2;margin:22px 0;max-width:550px;color:#fff4df}
+@media(max-width:1000px){.contact-methods{gap:24px}.contact-method{gap:10px}.contact-method h2{font-size:23px}.contact-method p{font-size:13px}.contact-phone{font-size:23px;gap:12px}}
+@media(max-width:700px){.contact-intro{padding:65px 7% 55px}.contact-intro h1{letter-spacing:-1px}.contact-intro>p:last-child{font-size:15px}.contact-methods{grid-template-columns:1fr;padding:0 7% 65px;gap:35px}.contact-method{gap:20px}.contact-phone{font-size:29px;margin-top:20px}.contact-method p{font-size:15px}.contact-method .social-pending{margin-top:18px}.contact-photo{padding:50px 7% 300px;min-height:540px}.contact-photo img{object-position:85% bottom;height:300px;top:auto}.contact-photo h2{font-size:34px}.contact-photo .eyebrow{font-size:9px}}

@@ -1,0 +1,52 @@
+/* One continuous photograph beneath the transparent navigation. */
+.hero {
+  min-height: max(720px, 60vw);
+  max-height: none;
+}
+
+.header { background: transparent; }
+
+.hero .hero-image {
+  inset: 0;
+  height: 100%;
+  object-position: left top;
+  transform-origin: left top;
+}
+
+@media (max-width: 800px) {
+  .hero { min-height: 720px; }
+  .hero .hero-image {
+    inset: 0;
+    height: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding-top: 161vw;
+    background: #e5e5dc;
+  }
+  .hero .hero-image {
+    inset: 0;
+    height: 161vw;
+    object-position: 3% top;
+  }
+  .hero::after {
+    bottom: auto;
+    height: 161vw;
+    background: linear-gradient(180deg, rgba(245,246,235,.3), transparent 20%);
+  }
+  .hero .hero-copy {
+    position: relative;
+    inset: auto;
+    width: auto;
+    padding: 30px 6% 12px;
+  }
+  .hero .hero-bottom {
+    position: relative;
+    inset: auto;
+    padding: 22px 6% 28px;
+  }
+}

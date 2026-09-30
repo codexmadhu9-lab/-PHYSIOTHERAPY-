@@ -1,0 +1,75 @@
+/* Barlow and heading weights verified against the saved reference HTML.
+   The reference wraps its main headings in <strong> and uses normal tracking. */
+:root {
+  font-family: 'Barlow', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  letter-spacing: normal;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 3.7943vw, 68px);
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+.hero h2 {
+  font-size: clamp(22px, 2.0833vw, 36px);
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.desktop-nav {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 3.0352vw, 48px);
+  letter-spacing: normal;
+}
+
+.philosophy h2 {
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.step h3 {
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.program-label h3 {
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .desktop-nav { font-size: 14px; letter-spacing: .7px; }
+}
+
+@media (max-width: 800px) {
+  .hero h1 { font-size: clamp(30px, 6.5vw, 52px); }
+  .hero h2 { font-size: 26px; }
+}
+
+@media (max-width: 540px) {
+  .hero h1 { font-size: 7.7vw; }
+  .hero h2 { font-size: 22px; }
+  .hero-copy > p:not(.eyebrow) { font-size: 15px; }
+}

@@ -1,0 +1,6 @@
+{
+  "method": "Built-in image_gen edit",
+  "source": "restore-balance.webp",
+  "output": "empty-rehabilitation-studio.webp",
+  "prompt": "Edit this photograph: remove the woman completely, including all her body, hair, clothing, arms, legs and feet, and remove her cast shadow. Naturally reconstruct the room and empty sage exercise mat behind her. Preserve the original camera position, 1536x1024 landscape composition, room architecture, warm pale plaster wall texture, wooden floor, window, plants, bench with blanket, daylight and window shadows. Keep the empty exercise mat exactly where it is. Change only the area occupied by the woman and her shadow. No people, text, logos or new objects."
+}

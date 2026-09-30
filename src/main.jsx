@@ -1,0 +1,13 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import '@fontsource/barlow/latin-300.css';
+import '@fontsource/barlow/latin-400.css';
+import '@fontsource/barlow/latin-500.css';
+import '@fontsource/barlow/latin-700.css';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+const Page = /^\/contact\/?$/.test(window.location.pathname) ? Contact : Home;
+import './styles.css';
+import './typography.css';
+import './sections/Hero.css';
+createRoot(document.getElementById('root')).render(<React.StrictMode><Page /></React.StrictMode>);
