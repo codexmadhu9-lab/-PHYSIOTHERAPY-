@@ -46,10 +46,16 @@ try {
   await page.keyboard.press('Escape');
  }
  await page.locator('.cta button').click();
+ await page.getByLabel('Full name',{exact:true}).fill('Example Person');
+ await page.getByLabel('Phone number',{exact:true}).fill('9000000000');
+ await page.getByLabel('Email address (optional)',{exact:true}).fill('person@example.com');
  await page.getByLabel('Interested in').selectOption('Sports Rehabilitation');
  const bookingLink=new URL(await page.getByRole('link',{name:'Continue on WhatsApp'}).getAttribute('href'));
  assert.equal(bookingLink.pathname,'/919281339363');
  assert.match(bookingLink.searchParams.get('text'),/Sports Rehabilitation/);
+ assert.match(bookingLink.searchParams.get('text'),/Example Person/);
+ assert.match(bookingLink.searchParams.get('text'),/9000000000/);
+ assert.match(bookingLink.searchParams.get('text'),/person@example.com/);
  const download=page.waitForEvent('download');await page.getByRole('button',{name:'Save enquiry draft'}).click();
  assert.equal((await download).suggestedFilename(),'physiotherapy-enquiry.txt');
  assert.match(await page.locator('[role="status"]').innerText(),/no appointment is booked/);
